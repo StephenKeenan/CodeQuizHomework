@@ -79,7 +79,7 @@ function getScore() {
     <h2>` + localStorage.getItem("highscoreName") + `-</h2>
     <h1>` + localStorage.getItem("highscore") + `</h1><br> 
     
-    <button onclick="clearScore()">Clear score!</button><button onclick="resetGame()">Play Again!</button>
+    <button onclick="resetGame()">Go Back</button><button onclick="clearScore()">Clear Highscore</button>
     
     `;
 
@@ -110,7 +110,7 @@ function resetGame() {
     </h1>
     <h3>
         Try to answer the following code related questions within the time
-        limit. Keep in mind that incorrect answers will penalize your scoreTime
+        limit. Keep in mind that incorrect answers will penalize your time
         by ten seconds. 
     </h3>
     <button onclick="start()">Start Quiz</button>`;

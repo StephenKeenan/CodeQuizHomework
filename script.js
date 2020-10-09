@@ -76,7 +76,7 @@ function setScore() {
 
 function getScore() {
     var quizContent = `
-    <h2>` + localStorage.getItem("highscoreName") + `-</h2>
+    <h2>` + localStorage.getItem("highscoreName") + `'s current highscore:</h2>
     <h1>` + localStorage.getItem("highscore") + `</h1><br> 
     
     <button onclick="resetGame()">Go Back</button><button onclick="clearScore()">Clear Highscore</button>

@@ -27,7 +27,7 @@ a {
 
 button {
     border: none;
-    background-color: rgb(131, 11, 243);
+    background-color: indigo;
     color: white;
     border-radius: 5px;
     padding: 10px 16px 10px 16px;
@@ -37,7 +37,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(136, 57, 210);
+    background-color: purple;
 }
 
 #quiz{

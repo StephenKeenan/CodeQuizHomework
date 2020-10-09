@@ -59,7 +59,7 @@ function endGame() {
 
     var quizContent = `
     <h2>All Done!</h2>
-    <h3>You got a ` + score + ` /5!</h3>
+    <h3>You got a ` + score + ` / 5!</h3>
     <input type="text" id="name" placeholder="Initials"> 
     <button onclick="setScore()">Submit</button>`;
 
@@ -151,7 +151,6 @@ function next() {
         }
         quizContent += buttonCode
     }
-
 
     document.getElementById("quizBody").innerHTML = quizContent;
 }

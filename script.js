@@ -37,7 +37,7 @@ var timer;
 //Starts countdown timer when "Start Quiz" button is clicked
 function start() {
 
-    timeLeft = 60;
+    timeLeft = 30;
     document.getElementById("timeLeft").innerHTML = timeLeft;
 
     timer = setInterval(function () {

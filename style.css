@@ -6,6 +6,10 @@
     float: left;
 }
 
+.left a {
+    color: indigo;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;

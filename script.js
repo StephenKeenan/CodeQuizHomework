@@ -16,7 +16,7 @@ var questions = [
         answer: "all of the above"
     },
     {
-        title: "String values must be enclosed within ____ when being assigned to variables.",
+        title: "String values must be enclosed within ____ when being assigned to variables",
         choices: ["commas", "curly brackets", "quotes", "parentheses"],
         answer: "quotes"
     },
@@ -68,11 +68,12 @@ function endGame() {
 
 //Store score to local storage
 function setScore() {
-    localStorage.setItem("highscore", score);
+    if (score > highScore) {
+        localstorage.setItem("highscore", score)};
     localStorage.setItem("highscoreName", document.getElementById('name').value);
     getScore();
-}
 
+}
 
 function getScore() {
     var quizContent = `

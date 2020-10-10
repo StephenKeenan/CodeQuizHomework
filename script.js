@@ -68,11 +68,13 @@ function endGame() {
 
 //Store score to local storage
 function setScore() {
-    if (score > highScore) {
-        localstorage.setItem("highscore", score)};
+    if (score > 0) {
+        localStorage.setItem("highscore", score)
+    } else {
+        localStorage.setItem("highscore", 0)
+    }
     localStorage.setItem("highscoreName", document.getElementById('name').value);
     getScore();
-
 }
 
 function getScore() {

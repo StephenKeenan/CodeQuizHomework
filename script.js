@@ -28,15 +28,17 @@ var questions = [
     }
 ];
 
-//setting the numerical variables for the functions.. scores and timers.. 
+//Setting the numerical variables for the functions.. scores and timers.. 
 var score = 0;
 var currentQuestion = -1;
 var timeLeft = 0;
 var timer;
 
+//Initiates array called highscores, holding anything in localStorage named "highscores" or starts as empty array
+let highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+
 //Starts countdown timer when "Start Quiz" button is clicked
 function start() {
-
     timeLeft = 60;
     document.getElementById("timeLeft").innerHTML = timeLeft;
 
@@ -68,25 +70,35 @@ function endGame() {
 
 //Store score to local storage
 function setScore() {
-    if (score > 0) {
-        localStorage.setItem("highscore", score)
-    } else {
-        localStorage.setItem("highscore", 0)
-    }
-    localStorage.setItem("highscoreName", document.getElementById('name').value);
+   
+    highscores.push(score);
+   
+    highscores.sort(function (a, b) {
+      return b - a;
+    });
+   
+    console.log(highscores);
+    
+    localStorage.setItem("highscores", JSON.stringify(highscores));
+    
+    console.log("local storage:" + localStorage.highscores[1]);
+  
+    localStorage.setItem("highscoreName", document.getElementById("name").value);
     getScore();
-}
-
+  }
+  
+   
 function getScore() {
-    var quizContent = `
-    <h2>` + localStorage.getItem("highscoreName") + `'s current highscore:</h2>
-    <h1>` + localStorage.getItem("highscore") + `</h1><br> 
+  let finalHighScore = localStorage.highscores[1];
+  var quizContent =
+    `<h2>` + localStorage.getItem("highscoreName") + `'s current highscore:</h2>
+    <h1>` + finalHighScore + `</h1><br> 
     
     <button onclick="resetGame()">Go Back</button><button onclick="clearScore()">Clear Highscore</button>
     
     `;
 
-    document.getElementById("quizBody").innerHTML = quizContent;
+  document.getElementById("quizBody").innerHTML = quizContent;
 }
 
 //Clear score name and value When "Clear Score" is clicked

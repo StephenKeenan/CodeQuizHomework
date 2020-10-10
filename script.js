@@ -37,7 +37,7 @@ var timer;
 //Starts countdown timer when "Start Quiz" button is clicked
 function start() {
 
-    timeLeft = 30;
+    timeLeft = 60;
     document.getElementById("timeLeft").innerHTML = timeLeft;
 
     timer = setInterval(function () {
@@ -142,7 +142,7 @@ function next() {
     var quizContent = "<h2>" + questions[currentQuestion].title + "</h2>"
 
     for (var buttonLoop = 0; buttonLoop < questions[currentQuestion].choices.length; buttonLoop++) {
-        var buttonCode = "<button onclick=\"[ANS]\">[CHOICE]</button>";
+        var buttonCode = "<button class='answerButton' onclick=\"[ANS]\">[CHOICE]</button>";
         buttonCode = buttonCode.replace("[CHOICE]", questions[currentQuestion].choices[buttonLoop]);
         if (questions[currentQuestion].choices[buttonLoop] == questions[currentQuestion].answer) {
             buttonCode = buttonCode.replace("[ANS]", "correct()");

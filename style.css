@@ -48,6 +48,18 @@ button:hover {
     background-color: purple;
 }
 
+.answerButton {
+    border: none;
+    background-color: indigo;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 16px 10px 16px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    display: block;
+}
+
 #quiz{
     text-align: center;
 }

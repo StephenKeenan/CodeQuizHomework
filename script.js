@@ -103,7 +103,7 @@ function getScore() {
 
 //Clear score name and value When "Clear Score" is clicked
 function clearScore() {
-    localStorage.setItem("highscore", "");
+    localStorage.setItem("highscores", "");
     localStorage.setItem("highscoreName", "");
 
     resetGame();
